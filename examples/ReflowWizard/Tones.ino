@@ -104,9 +104,47 @@ const int tuneRemoveBoards[] PROGMEM = {NOTE_C5,4,NOTE_B4,4,NOTE_E4,2,-1};
 const int tuneScreenshotBusy[] PROGMEM = {NOTE_C8,1000,-1};
 const int tuneScreenshotDone[] PROGMEM = {NOTE_D2,10,NOTE_D4,10,NOTE_D6,6,-1};
 const int tuneReflowBeep[] PROGMEM = {NOTE_C4,16,NOTE_B5,10,-1};
+const int tuneSpanishFlea[] PROGMEM = {
+  NOTE_E4,    8,
+  NOTE_F4,    8,
+  NOTE_FS4,   8,
+  NOTE_G4,    4,
+  NOTE_E5,    4,
+  NOTE_E5,    8,
+  NOTE_D5,    4,
+  NOTE_CS5, 2.5,
+  1,          8,
+  NOTE_A4,    8,
+  NOTE_GS4,   8,
+  NOTE_G4,    8,
+  NOTE_FS4,   4,
+  NOTE_D5,    4,
+  NOTE_D5,    8,
+  NOTE_C5,    4,
+  NOTE_B4,  2.5,
+  1,          8,
+  NOTE_G4,    8,
+  NOTE_FS4,   8,
+  NOTE_F4,    8,
+  NOTE_E4,    8,
+  NOTE_G4,    8,
+  NOTE_C5,    8,
+  NOTE_A4,    4,
+  NOTE_C5,    8,
+  NOTE_D5,    4,
+  NOTE_G4,    8,
+  NOTE_AS4,   8,
+  NOTE_DS5,   8,
+  NOTE_C5,    4,
+  NOTE_E5,    8,
+  NOTE_F5,    4,
+  NOTE_G5,    1,
+  -1,
+};
+
 
 const int *listOfTunes[MAX_TUNES] = {
-  tuneStartup, tuneButtonPressed, tuneInvalidPress, tuneReflowDone, tuneRemoveBoards,tuneScreenshotBusy,tuneScreenshotDone,tuneReflowBeep
+  tuneStartup, tuneButtonPressed, tuneInvalidPress, tuneSpanishFlea, tuneRemoveBoards,tuneScreenshotBusy,tuneScreenshotDone,tuneReflowBeep
 };
 
 // Play a tone
@@ -124,4 +162,3 @@ void playTones(int tune) {
   }
   noTone(BUZZER_PIN);
 }
-

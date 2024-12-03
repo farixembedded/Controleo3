@@ -59,7 +59,11 @@ void setup(void) {
   displayString(49, 92, FONT_12PT_BLACK_ON_WHITE, (char *) "Smart Oven Controller");
   displayString(420, 290, FONT_9PT_BLACK_ON_WHITE, (char *) CONTROLEO3_VERSION);
   tft.pokeRegister(ILI9488_DISPLAYON);
-  playTones(TUNE_STARTUP);
+//  while(true)
+  {
+  playTones(TUNE_REFLOW_DONE);
+  delay(2000);
+  }
   SerialUSB.begin(115200);
 
   // Get the prefs from external flash
@@ -194,4 +198,3 @@ void checkFreeMemory()
 //  delay(1000);
 //  tft.fillScreen(WHITE);
 }
-
